@@ -1,0 +1,116 @@
+/* Global Stylesheet for University Clearance System */
+
+.root {
+  -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  -fx-base: #f4f7f6;
+  -fx-accent: #3498db;
+  -fx-default-button: #2ecc71;
+  -fx-focus-color: #3498db;
+}
+
+/* Typography */
+.label {
+  -fx-text-fill: #2c3e50;
+}
+
+.header-text {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #2c3e50;
+}
+
+.subheader-text {
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #34495e;
+}
+
+/* Buttons */
+.button {
+  -fx-background-radius: 4;
+  -fx-padding: 8 15;
+  -fx-cursor: hand;
+  -fx-transition: 0.2s;
+}
+
+.button:hover {
+  -fx-opacity: 0.9;
+}
+
+.btn-primary {
+  -fx-background-color: #3498db;
+  -fx-text-fill: white;
+}
+
+.btn-success {
+  -fx-background-color: #2ecc71;
+  -fx-text-fill: white;
+}
+
+.btn-danger {
+  -fx-background-color: #e74c3c;
+  -fx-text-fill: white;
+}
+
+.btn-clear {
+  -fx-background-color: #95a5a6;
+  -fx-text-fill: white;
+}
+
+/* Input Fields */
+.text-field,
+.password-field {
+  -fx-background-radius: 4;
+  -fx-border-radius: 4;
+  -fx-border-color: #bdc3c7;
+  -fx-padding: 8;
+  -fx-background-color: white;
+}
+
+.text-field:focused,
+.password-field:focused {
+  -fx-border-color: #3498db;
+  -fx-border-width: 1.5;
+}
+
+/* Tables */
+.table-view {
+  -fx-background-color: transparent;
+  -fx-border-color: #bdc3c7;
+  -fx-border-radius: 4;
+}
+
+.table-view .column-header {
+  -fx-background-color: #ecf0f1;
+  -fx-text-fill: #2c3e50;
+  -fx-font-weight: bold;
+}
+
+.table-view .cell {
+  -fx-alignment: CENTER;
+}
+
+/* Containers */
+.main-container {
+  -fx-padding: 20;
+  -fx-background-color: #f4f7f6;
+}
+
+.login-root {
+  -fx-background-image: url("university_logo.jpg");
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+  -fx-background-size: 300;
+  /* Set a reasonable size for the logo */
+  -fx-background-color: #f4f7f6;
+}
+
+.login-container {
+  -fx-padding: 40;
+  -fx-background-color: rgba(255, 255, 255, 0.9);
+  /* Slightly transparent white */
+  -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+  -fx-background-radius: 8;
+  -fx-max-width: 400;
+  -fx-max-height: 450;
+}

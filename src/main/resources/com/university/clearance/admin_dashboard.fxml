@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="15.0" styleClass="main-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.university.clearance.controller.AdminDashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="20.0">
+        <Label text="Admin Dashboard" styleClass="subheader-text" />
+        <Button onAction="#handleLogout" text="Logout" styleClass="btn-danger" />
+    </HBox>
+
+    <TabPane tabClosingPolicy="UNAVAILABLE">
+        <!-- Students Tab -->
+        <Tab text="Manage Students">
+            <HBox spacing="10.0">
+                <padding><Insets top="10"/></padding>
+                <!-- Form -->
+                <VBox spacing="10.0" prefWidth="300.0">
+                    <TextField fx:id="stdId" promptText="Student ID" />
+                    <TextField fx:id="stdName" promptText="Full Name" />
+                    <TextField fx:id="stdEmail" promptText="Email" />
+                    <TextField fx:id="stdPass" promptText="Password" />
+                    <TextField fx:id="stdDept" promptText="Department" />
+                    <TextField fx:id="stdYear" promptText="Year" />
+                    <HBox spacing="5.0">
+                        <Button onAction="#handleAddStudent" text="Add" styleClass="btn-success" />
+                        <Button onAction="#handleUpdateStudent" text="Update" styleClass="btn-primary" />
+                        <Button onAction="#handleDeleteStudent" text="Delete" styleClass="btn-danger" />
+                        <Button onAction="#handleClear" text="Clear" styleClass="btn-clear" />
+                    </HBox>
+                </VBox>
+                <!-- Table -->
+                <TableView fx:id="studentTable" prefHeight="400.0" prefWidth="500.0">
+                    <columns>
+                        <TableColumn fx:id="sIdCol" text="ID" prefWidth="50" />
+                        <TableColumn fx:id="sNameCol" text="Name" prefWidth="120" />
+                        <TableColumn fx:id="sEmailCol" text="Email" prefWidth="120" />
+                        <TableColumn fx:id="sDeptCol" text="Dept" prefWidth="100" />
+                        <TableColumn fx:id="sYearCol" text="Year" prefWidth="50" />
+                    </columns>
+                </TableView>
+            </HBox>
+        </Tab>
+        
+        <!-- Staff Tab -->
+        <Tab text="Manage Staff">
+            <HBox spacing="10.0">
+                <padding><Insets top="10"/></padding>
+                <!-- Form -->
+                <VBox spacing="10.0" prefWidth="300.0">
+                    <TextField fx:id="staffId" promptText="Staff ID" />
+                    <TextField fx:id="staffName" promptText="Full Name" />
+                    <TextField fx:id="staffEmail" promptText="Email" />
+                    <TextField fx:id="staffPass" promptText="Password" />
+                    <TextField fx:id="staffDept" promptText="Department" />
+                    <HBox spacing="5.0">
+                        <Button onAction="#handleAddStaff" text="Add" styleClass="btn-success" />
+                        <Button onAction="#handleUpdateStaff" text="Update" styleClass="btn-primary" />
+                        <Button onAction="#handleDeleteStaff" text="Delete" styleClass="btn-danger" />
+                         <Button onAction="#handleClear" text="Clear" styleClass="btn-clear" />
+                    </HBox>
+                </VBox>
+                <!-- Table -->
+                <TableView fx:id="staffTable" prefHeight="400.0" prefWidth="500.0">
+                    <columns>
+                        <TableColumn fx:id="tIdCol" text="ID" prefWidth="50" />
+                        <TableColumn fx:id="tNameCol" text="Name" prefWidth="150" />
+                        <TableColumn fx:id="tEmailCol" text="Email" prefWidth="150" />
+                        <TableColumn fx:id="tDeptCol" text="Dept" prefWidth="100" />
+                    </columns>
+                </TableView>
+            </HBox>
+        </Tab>
+    </TabPane>
+</VBox>

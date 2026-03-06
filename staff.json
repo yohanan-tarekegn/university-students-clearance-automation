@@ -1,0 +1,1 @@
+[{"department":"LIBRARY","id":"T001","fullName":"Librarian","email":"lib@uni.edu","password":"admin","role":"STAFF"},{"department":"FINANCE","id":"T002","fullName":"Finance Officer","email":"finance@uni.edu","password":"admin","role":"STAFF"},{"department":"DEPARTMENT","id":"T003","fullName":"Dept Head","email":"dept@uni.edu","password":"admin","role":"STAFF"}]
